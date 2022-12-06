@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let Vistoria = new Schema({
-    picture: {
+    imagem: {
         type: String
     },
     rua: {
@@ -21,6 +21,9 @@ let Vistoria = new Schema({
         type: String
     },
     status: {
+        type: String
+    },
+    detalhe: {
         type: String
     }
 

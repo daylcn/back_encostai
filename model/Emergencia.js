@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let Emergencia = new Schema({
-    name: {
+    nome: {
         type: String
     },
-    number: {
+    numero: {
         type: String
     },
     id: {

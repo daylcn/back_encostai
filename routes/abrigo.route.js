@@ -47,10 +47,11 @@ abrigoRoutes.route('/update/:id').put(function (req, res) {
     if (!abrigo){
       res.status(400).send({'status': 'failure','mssg': 'Unable to find data'});
     } else {
-        abrigo.name = req.body.name;
-        abrigo.picture = req.body.picture;
+        abrigo.nome = req.body.nome;
+        abrigo.imagem = req.body.imagem;
         abrigo.endereco = req.body.endereco;
         abrigo.id = req.body.id;
+        abrigo.detalhe = req.body.detalhe;
 
         abrigo.save().then(business => {
           res.status(200).json({'status': 'success','mssg': 'Update complete'});

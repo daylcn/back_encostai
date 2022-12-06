@@ -47,9 +47,9 @@ userRoutes.route('/update/:id').put(function (req, res) {
     if (!user){
       res.status(400).send({'status': 'failure','mssg': 'Unable to find data'});
     } else {
-        user.name = req.body.name;
+        user.nome = req.body.nome;
         user.email = req.body.email;
-        user.phone_number = req.body.phone_number;
+        user.numero = req.body.numero;
         user.cpf = req.body.cpf;
         user.senha= req.body.senha;
 

@@ -47,9 +47,9 @@ emergenciaRoutes.route('/update/:id').put(function (req, res) {
         if (!emergencia) {
             res.status(400).send({ 'status': 'failure', 'mssg': 'Unable to find data' });
         } else {
-            emergencia.name = req.body.name;
-            emergencia.cnpj = req.body.cnpj;
-            emergencia.area = req.body.area;
+            emergencia.nome = req.body.nome;
+            emergencia.numero = req.body.numero;
+            emergencia.id = req.body.id;
 
             emergencia.save().then(business => {
                 res.status(200).json({ 'status': 'success', 'mssg': 'Update complete' });

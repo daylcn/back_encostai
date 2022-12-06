@@ -2,16 +2,19 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let Abrigo = new Schema({
-  name: {
+  nome: {
     type: String
   },
-  picture: {
+  imagem: {
     type: String
   },
   endereco: {
     type: Number
   },
   id: {
+    type: String
+  },
+  detalhe:{
     type: String
   }
 },{
