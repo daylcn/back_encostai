@@ -12,7 +12,7 @@ let User = new Schema({
     type: Number
   },
   cpf: {
-    type: String
+    type: Number
   },
   senha:{
     type: String

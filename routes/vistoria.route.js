@@ -47,14 +47,15 @@ vistoriaRoutes.route('/update/:id').put(function (req, res) {
         if (!vistoria) {
             res.status(400).send({ 'status': 'failure', 'mssg': 'Unable to find data' });
         } else {
-            vistoria.imagem = req.imagem;
+            vistoria.imagem = req.body.imagem;
             vistoria.rua = req.body.rua;
             vistoria.descricao = req.body.descricao;
             vistoria.numero_solicitacao = req.body.numero_solicitacao;
             vistoria.data_abertura = req.body.data_abertura;
             vistoria.cep= req.body.cep;
             vistoria.status = req.body.status;
-            vistoria.detalhe = req.body.detalhe;
+            vistoria.id_usuario = req.body.id_usuario;
+            vistoria.bairro = req.body.bairro;
 
 
             vistoria.save().then(business => {

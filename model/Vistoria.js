@@ -23,7 +23,13 @@ let Vistoria = new Schema({
     status: {
         type: String
     },
-    detalhe: {
+    id_usuario: {
+        type: String
+    },
+    bairro: {
+        type: String
+    },
+    cpf: {
         type: String
     }
 
