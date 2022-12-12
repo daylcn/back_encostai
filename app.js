@@ -9,8 +9,9 @@ mongoose.connect('mongodb://0.0.0.0:27017/mean', { useNewUrlParser: true }).then
   () => {console.log('Database is connected') },
   err => { console.log('Can not connect to the database'+ err)});
 
-const userRoutes = require('./routes/user.route');
+const userRoutes     = require('./routes/user.route');
 const vistoriaRoutes = require('./routes/vistoria.route');
+const smsRoutes      = require('./routes/sms.route');
 
 
 var app = express();
@@ -19,8 +20,7 @@ app.use(cors());
 
 app.use('/user', userRoutes);
 app.use('/vistoria',vistoriaRoutes);
-
-
+app.use('/sms', smsRoutes);
 
 app.get('/', function(req, res){
    res.send("Hello World!");
